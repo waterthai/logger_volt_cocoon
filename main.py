@@ -21,7 +21,7 @@ while True:
             if int(data_json[0]['online_status']) == 1:
                 print("อัพโหลดไฟล์ แบบ online")
                 # volt
-                volt = open('/home/pi/hottub_cocoon/txt_file/volt_tag.txt','r')
+                volt = open('/home/pi/txt_file/volt_tag.txt','r')
                 split_file_volt = volt.read().split(",")
                 volt1 = split_file_volt[0].replace("[","")
                 volt2 = split_file_volt[1]
@@ -41,7 +41,7 @@ while True:
                 time.sleep(600)
             else:
                 print("โหมด Offline")
-                volt = open('/home/pi/hottub_cocoon/txt_file/volt_tag.txt','r')
+                volt = open('/home/pi/txt_file/volt_tag.txt','r')
                 split_file_volt = volt.read().split(",")
                 volt1 = split_file_volt[0].replace("[","")
                 volt2 = split_file_volt[1]
