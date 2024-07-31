@@ -19,7 +19,7 @@ while True:
             response = urlopen(path_url)
             data_json = json.loads(response.read())
             if int(data_json[0]['online_status']) == 1:
-                print("อัพโหลดไฟล์ แบบ online")
+                print("Mode online")
                 # volt
                 volt = open('/home/pi/txt_file/volt_tag.txt','r')
                 split_file_volt = volt.read().split(",")
@@ -40,7 +40,7 @@ while True:
                                                     })
                 time.sleep(600)
             else:
-                print("โหมด Offline")
+                print("Mode Offline")
                 volt = open('/home/pi/txt_file/volt_tag.txt','r')
                 split_file_volt = volt.read().split(",")
                 volt1 = split_file_volt[0].replace("[","")
